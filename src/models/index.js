@@ -1,4 +1,5 @@
 module.exports = {
     Student: require('./Student'),
-    Teacher: require('./Teacher')
+    Teacher: require('./Teacher'),
+    StudentGroup: require('./StudentGroup')
 }
