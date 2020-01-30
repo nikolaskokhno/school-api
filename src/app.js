@@ -7,7 +7,8 @@ const studentValidation = require('./helpers/validations/student');
 const { 
     StudentController, 
     TeacherController,
-    StudentGroupController 
+    StudentGroupController,
+    LessonController
 } = require('./controllers'); 
 
 const app = express();
@@ -31,6 +32,12 @@ app.post('/studentgroup', StudentGroupController.Create);
 app.delete('/studentgroup/:id', StudentGroupController.Delete);
 app.patch('/studentgroup/:id', StudentGroupController.Update);
 app.get('/studentgroup/:id', StudentGroupController.Show);
+
+app.get('/lesson', LessonController.All);
+app.post('/lesson', LessonController.Create);
+app.delete('/lesson/:id', LessonController.Delete);
+app.patch('/lesson/:id', LessonController.Update);
+app.get('/lesson/:id', LessonController.Show);
 
 
 app.listen(3000, function(err) {
