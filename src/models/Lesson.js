@@ -7,7 +7,7 @@ const LessonSchema = new Schema(
         id: String,
         name: String,
         teacher: {type: String, ref: 'Teacher'},
-        groupStudents: [{ type: String, ref: 'StudentGroup' }],
+        groupStudents: { type: Schema.Types.ObjectId, ref: 'StudentGroup' },
         cabinet: String,
         countLesson: String
     },  
